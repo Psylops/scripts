@@ -1,20 +1,30 @@
 #!/bin/bash
 
-echo "This is a normal functioning calculator that can add or subtract"
-
-echo "Please state your first number"
-
 error=true
 
-read a
+if [[ ${1} = "--help" ]]
+then
 
-echo "Please state your second number"
+echo "pong!"
 
-read b
+exit 0
 
-echo "Would you like to add,subtract or multiply?"
+fi
 
-read opinput
+echo -e "\e[36m\e[1mThis is a normal functioning calculator that can add,subtract,multiply and divide"
+calc() {
+
+echo -e "\e[36mPlease state your first number" 
+
+read -p $'\e[92m' a
+
+echo -e "\e[36mPlease state your second number, it can't have any letters"
+
+read -p $'\e[92m' b
+
+echo -e "\e[36mWould you like to add,subtract,multiply or divide?"
+
+read -p $'\e[92m' opinput
 
 if [ $opinput = "add" ]
 then
@@ -31,36 +41,54 @@ then
 
 operator="*"
 
+elif [ $opinput = "divide" ]
+then
+
+operator="/"
+
+elif [ $opinput = "modulo" ]
+then
+
+operator="%"
+
 else
 
 error=false
 
-echo "This is not a operator"
+echo -e "\e[31mThat is not a operator " 
 
 fi
-
 
 if [ $error = true ]
 then
 
 sum=$(($a$operator$b))
 
-echo "The result is:"$sum
+echo -e "\e[36mThe result is:\e[35m"$sum
 
 fi
-echo "Anything else?"
+echo -e "\e[36mAnything else?"
 
-read anyelse
+read -p $'\e[92m' anyelse
 
 if [ $anyelse = "help" ]
 then
 
 notify-send "You are the best, Even if it doesn't seem like it right now" "Don't let the past stop you where you are, Create more memories and keep this train going"
 
-echo "or if you wanted to use the documentation use ./calc.sh --help"
+echo -e "\e[93mor if you wanted to use the documentation use ./calc.sh --help"
+
+elif [ $anyelse = "calculate" ]
+then
+
+calc
 
 else
+
+echo -e "\e[36mGoodbye!"
 
 exit 0
 
 fi
+}
+calc
