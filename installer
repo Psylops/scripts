@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ ${1} = "self-install" ]
+then
+
+
+
+sudo cp -r ./installer /usr/bin && sudo cp -r ./installer /bin
+
+fi
+
+if [ ${1} = "install" ]
+then
+
+cd Downloads || exit 0
+
+wget https://raw.githubusercontent.com/Psylops/calculator-script/main/Build/calc.sh
+chmod 755 calc
+
+sudo cp -r ./calc /bin && sudo cp -r ./calc /usr/bin
+
+fi
+
+if [ ${1} = "uninstall" ]
+then
+
+sudo rm -r /bin/calc && sudo rm -r /usr/bin/calc
+
+fi
