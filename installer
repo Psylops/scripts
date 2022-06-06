@@ -27,3 +27,10 @@ then
 sudo rm -r /bin/calc && sudo rm -r /usr/bin/calc
 
 fi
+
+if [ ${1} = "self-uninstall" ]
+then
+
+sudo rm -r /bin/installer && sudo rm -r /usr/bin/installer
+
+fi
