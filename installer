@@ -43,3 +43,26 @@ then
 sudo rm -r /bin/installer && sudo rm -r /usr/bin/installer
 
 fi
+
+if [ ${1} = "update" ]
+then
+
+sudo rm -r /bin/multicalc && sudo rm -r /usr/bin/multicalc
+
+cd ..
+
+cd ..
+
+cd Downloads
+
+wget https://raw.githubusercontent.com/Psylops/calculator-script/main/Build/multicalc.sh
+
+chmod 755 multicalc.sh
+
+mv multicalc.sh multicalc
+
+sudo cp -r ./multicalc /bin && sudo cp -r ./multicalc /usr/bin
+
+rm -r ./multicalc
+
+fi
