@@ -12,12 +12,21 @@ fi
 if [ ${1} = "install" ]
 then
 
-cd Downloads || exit
+cd ..
+
+cd ..
+
+cd Downloads
 
 wget https://raw.githubusercontent.com/Psylops/calculator-script/main/Build/calc.sh
-chmod 755 calc
+
+chmod 755 calc.sh
+
+mv calc.sh calc
 
 sudo cp -r ./calc /bin && sudo cp -r ./calc /usr/bin
+
+rm -r ./calc
 
 fi
 
