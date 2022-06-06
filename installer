@@ -12,7 +12,7 @@ fi
 if [ ${1} = "install" ]
 then
 
-cd Downloads || exit 0
+cd Downloads || exit
 
 wget https://raw.githubusercontent.com/Psylops/calculator-script/main/Build/calc.sh
 chmod 755 calc
@@ -28,7 +28,7 @@ sudo rm -r /bin/calc && sudo rm -r /usr/bin/calc
 
 fi
 
-if [ ${1} = "self-uninstall" ]
+if [ ${1} = "self-destruct" ]
 then
 
 sudo rm -r /bin/installer && sudo rm -r /usr/bin/installer
