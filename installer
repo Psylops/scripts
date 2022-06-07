@@ -3,18 +3,21 @@
 if [ ${1} = "self-install" ]
 then
 
+cd Downloads
 
 
-sudo cp -r ./installer /usr/bin && sudo cp -r ./installer /bin
+wget https://raw.githubusercontent.com/Psylops/calculator-script/main/installer
+
+sudo cp -r ./installer /usr/bin
+
+sudo cp -r ./installer /bin
 
 fi
 
 if [ ${1} = "install" ]
 then
 
-cd ..
-
-cd ..
+cd
 
 cd Downloads
 
@@ -24,7 +27,9 @@ chmod 755 multicalc.sh
 
 mv multicalc.sh multicalc
 
-sudo cp -r ./multicalc /bin && sudo cp -r ./multicalc /usr/bin
+sudo cp -r ./multicalc /bin
+
+sudo cp -r ./multicalc /usr/bin
 
 rm -r ./multicalc
 
@@ -33,25 +38,28 @@ fi
 if [ ${1} = "uninstall" ]
 then
 
-sudo rm -r /bin/multicalc && sudo rm -r /usr/bin/multicalc
+sudo rm -r /bin/multicalc
+
+sudo rm -r /usr/bin/multicalc
 
 fi
 
 if [ ${1} = "self-destruct" ]
 then
 
-sudo rm -r /bin/installer && sudo rm -r /usr/bin/installer
+sudo rm -r /bin/installer
+
+sudo rm -r /usr/bin/installer
 
 fi
 
 if [ ${1} = "update" ]
 then
 
-sudo rm -r /bin/multicalc && sudo rm -r /usr/bin/multicalc
+sudo rm -r /bin/multicalc
 
-cd ..
+sudo rm -r /usr/bin/multicalc
 
-cd ..
 
 cd Downloads
 
@@ -61,8 +69,27 @@ chmod 755 multicalc.sh
 
 mv multicalc.sh multicalc
 
-sudo cp -r ./multicalc /bin && sudo cp -r ./multicalc /usr/bin
+sudo cp -r ./multicalc /bin
+
+sudo cp -r ./multicalc /usr/bin
 
 rm -r ./multicalc
+
+fi
+
+if [ ${1} = "self-update" ]
+then
+
+cd Downloads
+
+wget https://raw.githubusercontent.com/Psylops/calculator-script/main/installer
+
+sudo rm -r /bin/installer
+
+sudo rm -r /usr/bin/installer
+
+sudo cp -r ./installer /bin
+
+sudo cp -r ./installer /usr/bin
 
 fi
