@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ${1} = "self-install" ]
+if [[ ${1} = "self-install" ]]
 then
 
 cd Downloads
@@ -14,7 +14,7 @@ sudo cp -r ./installer /bin
 
 fi
 
-if [ ${1} = "install" ]
+if [[ ${1} = "install" ]]
 then
 
 cd
@@ -35,7 +35,7 @@ rm -r ./multicalc
 
 fi
 
-if [ ${1} = "uninstall" ]
+if [[ ${1} = "uninstall" ]]
 then
 
 sudo rm -r /bin/multicalc
@@ -44,7 +44,7 @@ sudo rm -r /usr/bin/multicalc
 
 fi
 
-if [ ${1} = "self-destruct" ]
+if [[ ${1} = "self-destruct" ]]
 then
 
 sudo rm -r /bin/installer
@@ -53,7 +53,7 @@ sudo rm -r /usr/bin/installer
 
 fi
 
-if [ ${1} = "update" ]
+if [[ ${1} = "update" ]]
 then
 
 sudo rm -r /bin/multicalc
@@ -77,7 +77,7 @@ rm -r ./multicalc
 
 fi
 
-if [ ${1} = "self-update" ]
+if [[ ${1} = "self-update" ]]
 then
 
 cd Downloads
@@ -86,7 +86,7 @@ wget https://raw.githubusercontent.com/Psylops/calculator-script/main/installer
 
 sudo rm -r /bin/installer
 
-sudo rm -r /usr/bin/installer
+sudo[ rm -r /usr/bin/installer
 
 sudo cp -r ./installer /bin
 
