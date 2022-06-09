@@ -6,7 +6,7 @@ then
 cd Downloads
 
 
-wget https://raw.githubusercontent.com/Psylops/calculator-script/main/installer
+wget https://raw.githubusercontent.com/Psylops/scripts/main/installer
 
 sudo cp -r ./installer /usr/bin
 
@@ -21,7 +21,7 @@ cd
 
 cd Downloads
 
-wget https://raw.githubusercontent.com/Psylops/calculator-script/main/Build/multicalc.sh
+wget https://raw.githubusercontent.com/Psylops/scripts/main/Build/multicalc.sh
 
 chmod 755 multicalc.sh
 
@@ -63,7 +63,7 @@ sudo rm -r /usr/bin/multicalc
 
 cd Downloads
 
-wget https://raw.githubusercontent.com/Psylops/calculator-script/main/Build/multicalc.sh
+wget https://raw.githubusercontent.com/Psylops/scripts/main/Build/multicalc.sh
 
 chmod 755 multicalc.sh
 
@@ -82,7 +82,7 @@ then
 
 cd Downloads
 
-wget https://raw.githubusercontent.com/Psylops/calculator-script/main/installer
+wget https://raw.githubusercontent.com/Psylops/scripts/main/installer
 
 sudo rm -r /bin/installer
 
