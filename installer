@@ -86,7 +86,7 @@ wget https://raw.githubusercontent.com/Psylops/scripts/main/installer
 
 sudo rm -r /bin/installer
 
-sudo[ rm -r /usr/bin/installer
+sudo rm -r /usr/bin/installer
 
 sudo cp -r ./installer /bin
 
