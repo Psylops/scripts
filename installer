@@ -13,8 +13,6 @@ wget https://raw.githubusercontent.com/Psylops/scripts/main/installer 2> /dev/nu
 
 sudo cp -r ./installer /usr/bin
 
-sudo cp -r ./installer /usr/local/bin
-
 sudo cp -r ./installer /bin
 
 fi
@@ -34,8 +32,6 @@ mv multicalc.sh multicalc
 
 sudo cp -r ./multicalc /bin
 
-sudo cp -r ./multicalc /usr/local/bin
-
 sudo cp -r ./multicalc /usr/bin
 
 rm -r ./multicalc
@@ -47,8 +43,6 @@ then
 
 sudo rm -r /bin/multicalc
 
-sudo rm -r /usr/local/bin/multicalc
-
 sudo rm -r /usr/bin/multicalc
 
 fi
@@ -58,8 +52,6 @@ then
 
 sudo rm -r /bin/installer
 
-sudo rm -r /usr/local/bin/installer
-
 sudo rm -r /usr/bin/installer
 
 fi
@@ -68,8 +60,6 @@ if [[ ${1} = "update" ]]
 then
 
 sudo rm -r /bin/multicalc
-
-sudo rm -r /usr/local/bin/multicalc
 
 sudo rm -r /usr/bin/multicalc
 
@@ -88,8 +78,6 @@ mv multicalc.sh multicalc
 
 sudo cp -r ./multicalc /bin
 
-sudo cp -r ./multicalc /usr/local/bin
-
 sudo cp -r ./multicalc /usr/bin
 
 rm -r ./multicalc
@@ -107,13 +95,9 @@ wget https://raw.githubusercontent.com/Psylops/scripts/main/installer
 
 sudo rm -r /bin/installer
 
-sudo rm -r /usr/local/bin/installer
-
 sudo rm -r /usr/bin/installer
 
 sudo cp -r ./installer /bin
-
-sudo cp -r ./installer /usr/local/bin
 
 sudo cp -r ./installer /usr/bin
 
